@@ -3,7 +3,7 @@
 
     angular.module("TestAngApp").controller("Controller", function ($scope) {
         $scope.elements = [{ id: 0, name: 'test1' }, { id: 1, name: 'test1234' }];
-        $scope.element = $scope.elements[0];
+        $scope.element = $scope.elements[0].id;
         $scope.elementInfo = {};
 
         $scope.$watch("element", function (newValue, oldValue) {
@@ -39,12 +39,16 @@
         }();
 
         $scope.onSelect = function (value) {
+            if (value === undefined || value === null ) {
+                return;
+            }
+
             $scope.websocket.send(JSON.stringify({ action: 20, data: value }));
         };
         $scope.fillSelector = function (value) {
             $scope.$apply(function () {
                 $scope.elements = value;
-                $scope.element = $scope.elements[0];
+                $scope.element = $scope.elements[0].id;
             })
         };
         $scope.fillInfo = function (value) {

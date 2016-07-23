@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Owin;
-using Owin;
-
-[assembly: OwinStartup(typeof(TestJsAngDotNet.Startup))]
-
-namespace TestJsAngDotNet
+﻿namespace TestJsAngDotNet
 {
+    using Owin;
+
     public partial class Startup
     {
         public void Configuration(IAppBuilder app)

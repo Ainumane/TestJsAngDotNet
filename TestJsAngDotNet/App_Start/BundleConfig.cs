@@ -1,8 +1,7 @@
-﻿using System.Web;
-using System.Web.Optimization;
-
-namespace TestJsAngDotNet
+﻿namespace TestJsAngDotNet
 {
+    using System.Web.Optimization;
+
     public class BundleConfig
     {
         // Дополнительные сведения об объединении см. по адресу: http://go.microsoft.com/fwlink/?LinkId=301862
