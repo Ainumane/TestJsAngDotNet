@@ -10,7 +10,7 @@ namespace TestJsAngDotNet.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Test Angular App";
 
             return View();
         }
